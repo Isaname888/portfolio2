@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Иса — Портфолио</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+background: linear-gradient(135deg,#7b2ff7,#a855f7);
+color:#fff;
+padding:20px;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+background:#0b0d17;
+border-radius:20px;
+padding:40px;
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+position:relative;
+overflow:hidden;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:40px;
+}
+
+nav a{
+color:#aaa;
+margin:0 12px;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{color:#fff;}
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.hero-text h1{
+font-size:52px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.hero-text p{
+color:#bbb;
+margin-bottom:25px;
+font-size:18px;
+}
+
+.buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:12px 25px;
+border-radius:25px;
+cursor:pointer;
+border:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn-primary{
+background:linear-gradient(90deg,#ff7e5f,#a855f7);
+color:#fff;
+}
+
+.btn-secondary{
+background:transparent;
+border:1px solid #a855f7;
+color:#fff;
+}
+
+.btn:hover{transform:scale(1.08);}
+
+.hero img{
+width:320px;
+border-radius:15px;
+filter:grayscale(100%);
+transition:.4s;
+}
+
+.hero img:hover{filter:grayscale(0);}
+
+section{margin-top:50px;}
+
+h2{margin-bottom:15px;font-size:28px;}
+
+ul{padding-left:20px;line-height:1.8;}
+
+footer{
+margin-top:50px;
+text-align:center;
+color:#aaa;
+}
+
+/* эффекты */
+.container::before{
+content:'';
+position:absolute;
+width:200px;
+height:200px;
+background:radial-gradient(circle,#ff7e5f,transparent);
+top:-50px;
+right:-50px;
+opacity:0.6;
+}
+
+.container::after{
+content:'';
+position:absolute;
+width:200px;
+height:200px;
+background:radial-gradient(circle,#a855f7,transparent);
+bottom:-50px;
+left:-50px;
+opacity:0.6;
+}
+
+@media(max-width:768px){
+.hero{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<h2>Isa Portfolio</h2>
+<nav>
+<a href="#home">Главная</a>
+<a href="#about">Обо мне</a>
+<a href="#skills">Навыки</a>
+<a href="#contacts">Контакты</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-text">
+<h1>Иса<br>Web Developer</h1>
+<p>Я начинающий, но перспективный веб-разработчик. Создаю современные, стильные и адаптивные сайты с нуля.</p>
+
+<div class="buttons">
+<button class="btn btn-primary" onclick="scrollToSection('about')">Обо мне</button>
+<button class="btn btn-secondary" onclick="scrollToSection('contacts')">Связаться</button>
+</div>
+</div>
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="developer">
+</section>
+
+<section id="about">
+<h2>Обо мне</h2>
+<p>Меня зовут Иса, я начинающий веб-разработчик, который активно развивается в сфере IT. Я изучаю современные технологии и создаю красивые сайты.</p>
+<p>Моя цель — стать профессиональным разработчиком и работать над крутыми проектами, создавая удобные и стильные интерфейсы.</p>
+</section>
+
+<section id="skills">
+<h2>Навыки</h2>
+<ul>
+<li>HTML5 — уверенная верстка</li>
+<li>CSS3 — стили и анимации</li>
+<li>JavaScript — базовая логика</li>
+<li>Адаптивный дизайн</li>
+</ul>
+</section>
+
+<section id="contacts">
+<h2>Контакты</h2>
+<p>📧 Email: isa.dev@mail.com</p>
+<p>📞 Телефон: +7 700 258 0790</p>
+<p>💬 Telegram: @isa_dev</p>
+</section>
+
+<footer>
+<p>© 2026 Иса — Все права защищены</p>
+</footer>
+
+</div>
+
+<script>
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
